@@ -32,6 +32,7 @@
 				<Input value="{data>/productData/PRICE}" />
 				<Input value="{data>/productData/CURRENCY_CODE}" />
 				<Button icon="sap-icon://lead" press="onLoad" tooltip="Load most expensive product" />
+				<Button icon="sap-icon://lead" press="onLoad" tooltip="Load most expensive product" />
 			</f:content>
 		</f:SimpleForm>
 
