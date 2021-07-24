@@ -39,7 +39,7 @@
 
 		<Toolbar>
 			<ToolbarSpacer />
-			<Button text="Save" type="Success" icon="sap-icon://save" press="onSave" />
+			<Button text="Save" type="Accept" icon="sap-icon://save" press="onSave" />
 			<Button text="Delete" type="Reject" icon="sap-icon://delete" press="onDelete" />
 		</Toolbar>
 	</footer>
