@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+	<Table id="idTab" items="{To_OrderItems}" alternateRowColors="true" itemPress="onListPress">
+		<headerToolbar>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://filter" press="onFilter" tooltip="Filter Supplier"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<Text text="Order No"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="Item No"/>
+			</Column>
+			<Column>
+				<Text text="Net Amount"/>
+			</Column>
+			<Column>
+				<Text text="Tax Amount"/>
+			</Column>
+			<Column>
+				<Text text="Gross Amount"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem type="Navigation">
+				<Text text="{SO_ID}"/>
+				<Text text="{SO_ITEM_POS}"/>
+				<Text text="{NET_AMOUNT}"/>
+				<Text text="{TAX_AMOUNT}" />
+				<Text text="{GROSS_AMOUNT}"/>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>

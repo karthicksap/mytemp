@@ -1,0 +1,17 @@
+<core:View xmlns:core="sap.ui.core.mvc" xmlns="sap.m"
+		   controllerName="dem.fin.sr.controller.Supplier">
+
+<Page title="Supplier Detail" 
+	  showNavButton="true"
+	  navButtonPress="onBack">
+	
+	<ObjectHeader icon="sap-icon://supplier"
+			      intro="{name}"
+			      number="{contactNo}"
+			      title="{contactPerson}">
+		
+	</ObjectHeader>
+	
+</Page>
+	
+</core:View>

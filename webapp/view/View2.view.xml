@@ -1,0 +1,56 @@
+<core:View xmlns:core="sap.ui.core.mvc" xmlns="sap.m"
+		   xmlns:f="sap.ui.layout.form" xmlns:c="sap.ui.core"
+		   controllerName="dem.fin.sr.controller.View2" >
+	
+	<Page title="view 2"
+		  showNavButton="true"
+		  navButtonPress="onBack">
+	<ObjectHeader icon="{imageURL}"
+				  intro="{name}"
+				  number="{price}"
+				  numberUnit="{currency}"
+				  title="{type}">
+	</ObjectHeader>
+	
+	<IconTabBar>
+		<items>
+			<IconTabFilter icon="sap-icon://information" text="Info" key="IN">
+				<c:Fragment fragmentName="dem.fin.sr.fragments.info" type="XML"></c:Fragment>
+			</IconTabFilter>
+			
+			<IconTabFilter icon="sap-icon://list" text="Supplier List" key="LI">
+				<c:Fragment fragmentName="dem.fin.sr.fragments.SupplierTab" type="XML"></c:Fragment>
+			</IconTabFilter>		
+			
+			<IconTabFilter icon="sap-icon://drop-down-list" text="Drop-downs" key="DD">
+				
+				<Select	items="{/cities}">
+					<c:Item key="{name}" text="{name}" />
+				</Select>
+				
+				<ComboBox
+						  items="{/cities}">
+					<c:Item key="{name}" text="{name}" />
+				</ComboBox>
+				
+				<MultiComboBox
+						  items="{/cities}">
+					<c:Item key="{name}" text="{name}" />
+				</MultiComboBox>
+				
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+	
+	<footer>
+
+		<Toolbar>
+			<ToolbarSpacer />
+			<Button text="Save" type="Success" icon="sap-icon://save" press="onSave" />
+			<Button text="Cancel" type="Reject" press="onCancel" />
+		</Toolbar>
+	</footer>
+				
+	</Page>
+	
+</core:View>

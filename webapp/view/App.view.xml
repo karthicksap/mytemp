@@ -1,0 +1,7 @@
+<core:View xmlns:core="sap.ui.core.mvc" 
+		   xmlns="sap.m"
+		   controllerName="dem.fin.sr.controller.App">
+	
+	<SplitApp id="idApp" />
+	
+</core:View>

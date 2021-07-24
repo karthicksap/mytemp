@@ -1,0 +1,165 @@
+{
+	"version": "1.12.0",
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_fiori3", "sap_belize"]
+	},
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "dem.fin.sr",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+
+		"dataSources": {
+
+			"tempService": {
+
+				"uri": "/sap/opu/odata/sap/ZTEMP_SRV/",
+				"type": "OData",
+				"settings": {
+
+					"odataVersion": "2.0"
+				}
+			}
+
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"tags": {
+			"keywords": ["{{fruits}}"]
+		},
+		"ach": "FIN-ACC-AR"
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"dependencies": {
+			"minUI5Version": "1.60",
+			"libs": {
+				"sap.m": {
+					"minVersion": ""
+				},
+				"sap.ui.layout": {
+					"minVersion": ""
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/mystyle.css",
+				"id": ""
+			}]
+		},
+
+		"rootView": {
+
+			"id": "myView",
+			"viewName": "dem.fin.sr.view.App",
+			"type": "XML"
+		},
+
+		"routing": {
+
+			"config": {
+
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "dem.fin.sr.view",
+				"controlId": "idApp",
+				"viewType": "XML"
+
+			},
+
+			"routes": [{
+				"pattern": "",
+				"name": "start",
+				"target": ["view1", "sap"]
+
+			}, 
+
+			{
+
+				"pattern": "supplier/{sId}",
+				"name": "third",
+				"target": ["view1", "supplier"]
+
+			},
+			{
+
+				"pattern": "addProduct",
+				"name": "final",
+				"target": ["view1", "addNew"]
+
+			},
+			{
+				"pattern": "{fId}",
+				"name": "sec",
+				"target": ["view1", "view2"]
+
+			}],
+
+			"targets": {
+
+				"view1": {
+					"viewName": "View1",
+					"controlAggregation": "masterPages",
+					"viewId": "idView1"
+				},
+				"sap": {
+					"viewName": "Sap",
+					"controlAggregation": "detailPages",
+					"viewId": "idSap"
+				},
+				"view2": {
+
+					"viewName": "View2",
+					"controlAggregation": "detailPages",
+					"viewId": "idView2"
+				},
+				"supplier": {
+
+					"viewName": "Supplier",
+					"controlAggregation": "detailPages",
+					"viewId": "idView3"
+
+				},
+				"addNew": {
+					
+					"viewName": "Add",
+					"controlAggregation": "detailPages",
+					"viewId": "idAdd"
+				}
+			}
+
+		},
+
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "i18n/i18n.properties"
+				}
+			},
+			"local": {
+
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "models/MyData.json"
+			},
+			"": {
+
+				"dataSource": "tempService"
+			}
+		}
+	},
+	"_version": "1.9.0"
+}

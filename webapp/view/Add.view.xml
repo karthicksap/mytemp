@@ -1,0 +1,49 @@
+<core:View xmlns:core="sap.ui.core.mvc" xmlns="sap.m"
+		   xmlns:f="sap.ui.layout.form" controllerName="dem.fin.sr.controller.Add">
+	
+	<Page>
+		<f:SimpleForm id="SimpleForm"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Add New Product"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Product ID" />
+				<Input value="{data>/productData/PRODUCT_ID}" change="onChange" />
+				<Label text="Name" />
+				<Input value="{data>/productData/NAME}" />
+				<Label text="Description" />
+				<Input value="{data>/productData/DESCRIPTION}" />
+				<Label text="Supplier ID" />
+				<Input value="{data>/productData/SUPPLIER_ID}" />
+				<Label text="Price/Currency" />
+				<Input value="{data>/productData/PRICE}" />
+				<Input value="{data>/productData/CURRENCY_CODE}" />
+				<Button icon="sap-icon://lead" press="onLoad" tooltip="Load most expensive product" />
+			</f:content>
+		</f:SimpleForm>
+
+	<footer>
+
+		<Toolbar>
+			<ToolbarSpacer />
+			<Button text="Save" type="Success" icon="sap-icon://save" press="onSave" />
+			<Button text="Delete" type="Reject" icon="sap-icon://delete" press="onDelete" />
+		</Toolbar>
+	</footer>
+	
+	</Page>
+	
+</core:View>
