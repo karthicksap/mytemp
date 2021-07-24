@@ -5,7 +5,11 @@
 		<f:SimpleForm id="SimpleForm"
 			editable="true"
 			layout="ResponsiveGridLayout"
+<<<<<<< HEAD
 			title="Add"
+=======
+			title="Add New Product"
+>>>>>>> a96b93120915af7b99c6aa7ecb700e26ca5230f8
 			labelSpanXL="3"
 			labelSpanL="3"
 			labelSpanM="3"
