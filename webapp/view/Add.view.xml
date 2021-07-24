@@ -5,7 +5,7 @@
 		<f:SimpleForm id="SimpleForm"
 			editable="true"
 			layout="ResponsiveGridLayout"
-			title="Add View"
+			title="Add"
 			labelSpanXL="3"
 			labelSpanL="3"
 			labelSpanM="3"
